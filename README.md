@@ -1,5 +1,4 @@
-# Identification of Coronavirus & Pneumonia from Chest X-ray Scans using Deep Multilayered CNN
-
+# Diagnosis of COVID-19 and Pneumonia using depthwise separable convolutional neural network
 The proposed model is trained on NVIDIA RTX 2060 GPU paired with a quad-core processor \& 16gb of DDR4 memory clocked at 3000mHz.
 \
 \
@@ -15,14 +14,13 @@ The research paper is going to publised soon. Once the paper is published, the l
 * P. Mooney, “Chest x-ray images (pneumonia),” https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia
 
 ## Run in your own machine :
-* `git clone https://github.com/Shrabana97/Identification-of-Coronavirus-and-Pneumonia-from-Chest-X-ray-Scans-using-Deep-Multilayered-CNN.git`
-* `cd Identification-of-Coronavirus-and-Pneumonia-from-Chest-X-ray-Scans-using-Deep-Multilayered-CNN`
+* `git clone https://github.com/Shrabana97/Diagnosis-of-COVID-19-and-Pneumonia-using-depthwise-separable-convolutional-neural-network.git`
+* `cd Diagnosis-of-COVID-19-and-Pneumonia-using-depthwise-separable-convolutional-neural-network`
 * `pip3 install -r requirements.txt` (install required libraries)
-* Download the dataset from the [Google-Drive link]((https://drive.google.com/file/d/1OjT6BfNsRRB_nX2O_aAz6-3DRlcIFZiK/view?usp=sharing)).
+* Download the dataset from https://drive.google.com/file/d/1OjT6BfNsRRB_nX2O_aAz6-3DRlcIFZiK/view?usp=sharing
 * Upon unzipping the .zip file 'train' folder will be created where all the classes and their respective images are stored.
 * To split the data run `python3 split.py` and follow the on-screen instructions.
     *   It will ask the address of the 'train' folder and will store that address in `path_of_train_dir.txt`. 
 * To resize the data run `python3 pre-process.py`.
-* To perform classical data augmentation on the training data run `python3 augment.py`.
 * To train and create the model run `python3 train.py`.
     * Model and the training details will be stored in `result` directory.
