@@ -49,7 +49,7 @@ train_directory, validation_directory, test_directory
 
 # Hyper-parameter setting-1
 learning_rate = 0.001
-epoch = 100
+epoch = 90
 batch_size = 8
 
 # Characteristics folder
