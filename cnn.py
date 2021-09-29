@@ -1,7 +1,7 @@
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 from tensorflow.keras.models import Model
-from tensorflow.keras.layers import Input, Conv2D, LeakyReLU, MaxPooling2D, Flatten, Dense, Dropout
+from tensorflow.keras.layers import Input, DepthwiseConv2D, BatchNormalization, Conv2D, LeakyReLU, MaxPooling2D, GlobalAveragePooling2D, Dense, Dropout
 from tensorflow.keras.regularizers import l2
 
 
