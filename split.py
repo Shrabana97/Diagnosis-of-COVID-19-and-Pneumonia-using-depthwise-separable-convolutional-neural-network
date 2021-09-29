@@ -6,10 +6,23 @@ import random
 import os
 from shutil import copyfile
 
-txt = open("path_of_train_dir.txt", "w") 
-root_dir = input("Path where 'train' directory belongs: ")
-txt.write(root_dir)
-txt.close()
+def path_of_train_dir():
+    txt = open("path_of_train_dir.txt", "w") 
+    root_dir = input("Path where 'train' directory belongs: ")
+    txt.write(root_dir)
+    txt.close()
+    return root_dir
+
+if os.path.exists("path_of_train_dir.txt"):
+    open_root_dir = open("path_of_train_dir.txt", "r")
+    root_dir = open_root_dir.read()
+    if os.path.exists(os.path.join(root_dir, 'train')):
+        print(f"Train directory already exists at {root_dir}\n\n")   
+    else:
+        root_dir = path_of_train_dir()
+else:
+    root_dir = path_of_train_dir()
+    
 
 source_folder_dir = os.path.join(root_dir, 'train')
 source_folder_dir_class = []
